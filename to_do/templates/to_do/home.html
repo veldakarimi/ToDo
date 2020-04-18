@@ -1,6 +1,8 @@
 {% load static %}
 <html>
 
+{% csrf_token %}
+
 <body ng-app="to_do.demo">
     {% verbatim %} 
 	<div ng-controller="To_doController">
