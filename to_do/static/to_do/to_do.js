@@ -34,10 +34,8 @@ const fn = () => {
                 });
             }
         }
-        //This bracket was not here
+       
 
 fn();
 
-//pale juu kuna config ya csrf
-//read more here
-//https://django-angular.readthedocs.io/en/latest/csrf-protection.html
+

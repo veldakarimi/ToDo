@@ -1,4 +1,5 @@
 {% load static %}
+
 <html>
 
 {% csrf_token %}
@@ -9,7 +10,10 @@
         <div ng-repeat="list in data">
             <h3>{{ list.name }}</h3>
             <ul>
-                <li ng-repeat="card in list.cards">{{ card.title }}</li>
+                <li ng-repeat="card in list.cards">
+                    <to_do-Card> 
+                    </to_do-Card>
+                </li>
             </ul>
             <input type="text" ng-model="new_title"/> 
             <button ng-click="add(list, new_title)">+</button>
@@ -20,6 +24,7 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
 	
-    <script src={% static "to_do\to_do.js" %}> </script>
+    <script src="{% static "to_do/to_do.js" %}"> </script>
+    <script src="{% static "to_do/card.directive.js" %}"></script>
 </body>
 </html>
