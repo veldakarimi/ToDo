@@ -31,8 +31,8 @@ const fn = () => {
 
                 $http.get('/to_do/lists/').then(function(response){
                     $scope.data = response.data;
-                });
-            }
+                }
+                )} 
         }
        
 
